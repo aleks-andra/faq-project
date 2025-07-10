@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1440px;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 80px;
+  outline: 1px solid red;
+
+  @media (max-width: 1439px) {
+    flex-direction: column;
+    padding: 36px 16px 56px 16px;
+    justify-content: start;
+    gap: 32px;
+  }
+}
+
+.title {
+  font-size: 128px;
+  line-height: 128px;
+  font-weight: 600;
+  color: var(--basic-content);
+  outline: 1px solid blue;
+
+  @media (max-width: 1439px) {
+    font-size: 64px;
+    line-height: 64px;
+  }
+}
+
+.faqContainer {
+  width: 620px;
+  outline: 1px solid green;
+
+  @media (max-width: 1439px) {
+    width: 100%;
+  }
+}

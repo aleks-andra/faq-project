@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'MegaFon Graphik LC Semibold';
+    font-family: 'MegaFonGraphikLC';
     src: url('../assets/fonts/MegaFonGraphikLC-Semibold.woff2') format('woff2'),
          url('../assets/fonts/MegaFonGraphikLC-Semibold.woff')  format('woff');
     font-weight: 600;
@@ -8,7 +8,7 @@
   }
 
   @font-face {
-    font-family: 'MegaFon Graphik LC Regular';
+    font-family: 'MegaFonGraphikLC';
     src: url('../assets/fonts/MegaFonGraphikLC-Regular.woff2') format('woff2'),
          url('../assets/fonts/MegaFonGraphikLC-Regular.woff')  format('woff');
     font-weight: 400;
@@ -17,7 +17,7 @@
   }
 
   @font-face {
-    font-family: 'MegaFon Graphik LC Medium';
+    font-family: 'MegaFonGraphikLC';
     src: url('../assets/fonts/MegaFonGraphikLC-Medium.woff2') format('woff2'),
          url('../assets/fonts/MegaFonGraphikLC-Medium.woff')  format('woff');
     font-weight: 500;

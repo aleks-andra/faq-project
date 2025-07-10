@@ -1,0 +1,14 @@
+.container {
+    margin-bottom: 10px;
+    outline: 1px solid purple;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+}
