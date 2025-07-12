@@ -6,7 +6,7 @@
   max-width: 24px;
   max-height: 24px;
   svg {
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.5s ease-in-out;
     transform: rotate(-180deg);
   }
 }

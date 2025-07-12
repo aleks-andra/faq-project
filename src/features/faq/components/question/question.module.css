@@ -111,6 +111,9 @@
 }
 
 .answerContainer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
   display: flex;
   gap: 66px;
 
@@ -119,6 +122,10 @@
     flex-direction: column;
     gap: 8px;
   }
+}
+
+.answerContainer.expanded {
+  max-height: 800px;
 }
 
 .sentFeedback {

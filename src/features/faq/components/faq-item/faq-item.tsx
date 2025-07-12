@@ -1,4 +1,5 @@
 import { useState, type FC, type ReactNode } from "react";
+import cx from "classnames";
 
 import styles from "./faq-item.module.css";
 import { ArrowButton } from "../arrow-button/arrow-button";
@@ -23,7 +24,9 @@ export const FaqItem: FC<Props> = ({ name, children }) => {
         />
       </div>
 
-      {isVisible && <div className={styles.questions}>{children}</div>}
+      <div className={cx(styles.questions, { [styles.expanded]: isVisible })}>
+        {children}
+      </div>
     </section>
   );
 };

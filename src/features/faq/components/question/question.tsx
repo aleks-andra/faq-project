@@ -38,39 +38,37 @@ export const Question: FC<Props> = ({
           />
         </div>
       </div>
-      {isVisible && (
-        <div className={styles.answerContainer}>
-          <div className={styles.feedbackTitle}>Ответ</div>
-          <div className={styles.answerWrapper}>
-            <div>{answer}</div>
-            {!hasFeedbackState ? (
-              <div className={styles.actions}>
-                <p className={styles.feedbackPrompt}>
-                  Информация была полезной?
-                </p>
-                <div className={styles.feedbackButtons}>
-                  <button
-                    className={styles.feedbackButton}
-                    onClick={() => handleClick("increase")}
-                  >
-                    Да
-                  </button>
-                  <button
-                    className={styles.feedbackButton}
-                    onClick={() => handleClick("decrease")}
-                  >
-                    Нет
-                  </button>
-                </div>
+      <div
+        className={cx(styles.answerContainer, { [styles.expanded]: isVisible })}
+      >
+        <div className={styles.feedbackTitle}>Ответ</div>
+        <div className={styles.answerWrapper}>
+          <div>{answer}</div>
+          {!hasFeedbackState ? (
+            <div className={styles.actions}>
+              <p className={styles.feedbackPrompt}>Информация была полезной?</p>
+              <div className={styles.feedbackButtons}>
+                <button
+                  className={styles.feedbackButton}
+                  onClick={() => handleClick("increase")}
+                >
+                  Да
+                </button>
+                <button
+                  className={styles.feedbackButton}
+                  onClick={() => handleClick("decrease")}
+                >
+                  Нет
+                </button>
               </div>
-            ) : (
-              <p className={cx(styles.feedbackPrompt, styles.sentFeedback)}>
-                Отзыв отправлен, спасибо!
-              </p>
-            )}
-          </div>
+            </div>
+          ) : (
+            <p className={cx(styles.feedbackPrompt, styles.sentFeedback)}>
+              Отзыв отправлен, спасибо!
+            </p>
+          )}
         </div>
-      )}
+      </div>
     </section>
   );
 };
