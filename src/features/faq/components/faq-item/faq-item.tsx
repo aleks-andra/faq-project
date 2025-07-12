@@ -12,7 +12,7 @@ export const FaqItem: FC<Props> = ({ name, children }) => {
   return (
     <section className={styles.container}>
       <div className={styles.wrapper}>
-        <div>{name}</div>
+        <div className={styles.name}>{name}</div>
         <button onClick={() => setIsVisible(!isVisible)}>click</button>
       </div>
 

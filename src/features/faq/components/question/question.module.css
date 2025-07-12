@@ -1,14 +1,40 @@
 .container {
-    margin-bottom: 10px;
-    outline: 1px solid purple;
+  margin-bottom: 10px;
+  outline: 1px solid purple;
 }
 
 .wrapper {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .actions {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+}
+
+.feedbackTitle {
+  font-size: 14px;
+  line-height: 15px;
+  color: var(--feedback-text);
+  text-transform: uppercase;
+}
+
+.question {
+  font-size: 15px;
+  font-weight: 500px;
+  line-height: 24px;
+  text-align: start;
+}
+
+.feedbackPrompt {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--feedback-text);
+}
+
+.feedbackButton {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--feedback-text);
 }
