@@ -28,7 +28,7 @@ export const Faq: FC = () => {
           {Object.values(categories).sort((a, b) => b.rating - a.rating).map((category) => {
             return (
               <FaqItem name={category.name} key={category.id}>
-                {category.questionIds.map((questionId) => {
+                {category.questionIds.sort((a, b) => questions[b].rating - questions[a].rating).map((questionId) => {
                   const question = questions[questionId];
                   return (
                     <Question
