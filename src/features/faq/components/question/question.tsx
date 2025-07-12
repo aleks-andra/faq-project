@@ -6,15 +6,21 @@ import cx from "classnames";
 type Props = {
   name: string;
   answer: string;
+  hasFeedback?: boolean;
   onClick: (actionType: "increase" | "decrease") => void;
 };
 
-export const Question: FC<Props> = ({ name, answer, onClick }) => {
+export const Question: FC<Props> = ({
+  name,
+  answer,
+  hasFeedback = false,
+  onClick,
+}) => {
   const [isVisible, setIsVisible] = useState(false);
-  const [hasFeedback, setHasFeedback] = useState(false);
+  const [hasFeedbackState, setHasFeedbackState] = useState(hasFeedback);
 
   const handleClick = (actionType: "increase" | "decrease") => {
-    setHasFeedback(true);
+    setHasFeedbackState(true);
     onClick(actionType);
   };
 
@@ -33,11 +39,11 @@ export const Question: FC<Props> = ({ name, answer, onClick }) => {
         </div>
       </div>
       {isVisible && (
-        <div  className={styles.answerContainer}>
+        <div className={styles.answerContainer}>
           <div className={styles.feedbackTitle}>Ответ</div>
           <div className={styles.answerWrapper}>
             <div>{answer}</div>
-            {!hasFeedback ? (
+            {!hasFeedbackState ? (
               <div className={styles.actions}>
                 <p className={styles.feedbackPrompt}>
                   Информация была полезной?
@@ -58,7 +64,9 @@ export const Question: FC<Props> = ({ name, answer, onClick }) => {
                 </div>
               </div>
             ) : (
-              <p className={cx(styles.feedbackPrompt, styles.sentFeedback)}>Отзыв отправлен, спасибо!</p>
+              <p className={cx(styles.feedbackPrompt, styles.sentFeedback)}>
+                Отзыв отправлен, спасибо!
+              </p>
             )}
           </div>
         </div>
