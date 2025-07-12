@@ -1,0 +1,16 @@
+.arrowButton {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  max-width: 24px;
+  max-height: 24px;
+  svg {
+    transition: transform 0.3s ease-in-out;
+    transform: rotate(-180deg);
+  }
+}
+
+.rotatedArrow svg{
+  transform: rotate(0deg);
+}

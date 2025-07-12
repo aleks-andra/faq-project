@@ -1,40 +1,126 @@
 .container {
-  margin-bottom: 10px;
-  outline: 1px solid purple;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--gray-light);
 }
 
 .wrapper {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+
+  @media (max-width: 1439px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
 }
 
 .actions {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: 1439px) {
+    justify-content: flex-start;
+    gap: 50px;
+  }
 }
 
 .feedbackTitle {
   font-size: 14px;
   line-height: 15px;
-  color: var(--feedback-text);
+  color: var(--gray);
   text-transform: uppercase;
+  padding-top: 5px;
+
+  @media (max-width: 1439px) {
+    padding-top: 0;
+  }
 }
 
 .question {
   font-size: 15px;
-  font-weight: 500px;
+  font-weight: 500;
   line-height: 24px;
   text-align: start;
+}
+
+.feedbackButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .feedbackPrompt {
   font-size: 12px;
   line-height: 18px;
-  color: var(--feedback-text);
+  color: var(--gray);
+  margin: 0;
 }
 
 .feedbackButton {
   font-size: 12px;
   line-height: 18px;
-  color: var(--feedback-text);
+  color: var(--gray);
+  background-color: transparent;
+  border: 1px solid var(--gray);
+  width: 55px;
+  height: 34px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid var(--graphite);
+    color: var(--graphite);
+  }
+}
+
+.arrow {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  max-width: 24px;
+  max-height: 24px;
+  svg {
+    transition: transform 0.3s ease-in-out;
+    transform: rotate(-180deg);
+  }
+}
+
+.rotatedArrow svg {
+  transform: rotate(0deg);
+}
+
+.questionWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.answerWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.answerContainer {
+  display: flex;
+  gap: 66px;
+
+  @media (max-width: 1439px) {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+.sentFeedback {
+  padding: 8px 0;
 }

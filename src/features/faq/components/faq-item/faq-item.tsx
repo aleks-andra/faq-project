@@ -1,6 +1,7 @@
 import { useState, type FC, type ReactNode } from "react";
 
 import styles from "./faq-item.module.css";
+import { ArrowButton } from "../arrow-button/arrow-button";
 
 type Props = {
   name: string;
@@ -13,10 +14,16 @@ export const FaqItem: FC<Props> = ({ name, children }) => {
     <section className={styles.container}>
       <div className={styles.wrapper}>
         <div className={styles.name}>{name}</div>
-        <button onClick={() => setIsVisible(!isVisible)}>click</button>
+        <ArrowButton
+          size="m"
+          isRotated={isVisible}
+          onClick={() => {
+            setIsVisible(!isVisible);
+          }}
+        />
       </div>
 
-      {isVisible && <div>{children}</div>}
+      {isVisible && <div className={styles.questions}>{children}</div>}
     </section>
   );
 };

@@ -1,4 +1,5 @@
 :root {
-  --basic-content: #333333;
-  --feedback-text: #A0A0A0;
+  --graphite: #333333;
+  --gray: #a0a0a0;
+  --gray-light: #cbcbcb;
 }

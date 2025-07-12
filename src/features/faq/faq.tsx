@@ -43,7 +43,6 @@ export const Faq: FC = () => {
             );
           })}
         </FaqItems>
-        .
       </div>
     </section>
   );
