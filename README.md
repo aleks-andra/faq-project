@@ -1,69 +1,34 @@
-# React + TypeScript + Vite
+# Проект: FAQ с рейтингом
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Задача
+Создать интерактивную страницу FAQ с возможностью голосования за полезность ответов.
 
-Currently, two official plugins are available:
+## Что нужно сделать
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [x] **Верстка (обязательно)**
+  - [x] Сверстать страницу по макету с адаптивностью для мобильных устройств
+  - [x] Использовать предоставленные шрифты
 
-## Expanding the ESLint configuration
+- [x] **Функциональность (обязательно)**
+  - [x] Отображение списка вопросов, сгруппированных по категориям
+  - [x] Кнопки "Да"/"Нет" для каждого вопроса
+  - [x] Подсчет рейтинга: "Да" = +1, "Нет" = -1
+  - [x] Сортировка категорий по убыванию суммарного рейтинга
+  - [x] Сортировка вопросов внутри категории по убыванию рейтинга
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- [x] **Технические требования**
+  - [x] React (можно Create React App)
+  - [x] Состояние управляется через useState/useReducer
+  - [x] Данные использовать из приложенного JSON файла
+  - [x] Стили CSS/SCSS (без UI-библиотек)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- [x] **Дополнительно (по желанию)**
+  - [x] Анимация при изменении рейтинга
+  - [x] Сохранение голосов в localStorage
+  - [x] Деплой на GitHub Pages
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Критерии оценки
+- Качество кода (30%) - читаемость, структура, использование React
+- Верстка (25%) - соответствие макету, адаптивность
+- Функциональность (25%) - работа интерактива, корректная сортировка
+- Внимание к деталям (20%) - мелкие нюансы UX, обработка краевых случаев
