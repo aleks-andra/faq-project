@@ -43,7 +43,7 @@ export const Question: FC<Props> = ({
       >
         <div className={styles.feedbackTitle}>Ответ</div>
         <div className={styles.answerWrapper}>
-          <div>{answer}</div>
+          <div className={styles.answer}>{answer}</div>
           {!hasFeedbackState ? (
             <div className={styles.actions}>
               <p className={styles.feedbackPrompt}>Информация была полезной?</p>
